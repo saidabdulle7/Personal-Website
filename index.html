@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF 8">
+	<meta htp-equiv="X-UA-Compatible content= IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/e41c68df03.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<nav>
+				<h1>Said</h1>
+				<ul>
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href= "#">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="header-text">
+				<p>Web Developer</p>
+				<h1>Hi, I'm <span>Said</span><br>Abdulle from Plymouth, MN</h1>
+			</div>
+		</div>
+	</div>
+	<!---------about---------->
+	<div id="about"> 
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="background.PNG">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>I hold an Associate's degree in Computer Science and am pursuing my Bachelor's degree at Metro State University. With two years of experience in web development, I’ve discovered a real passion for building and improving digital experiences. I'm also studying for the CompTIA A+ certification, further deepening my interest in working with computers and solving hardware and software issues.
+
+In addition to my technical knowledge, I have three years of customer service experience at Walgreens, where I developed strong communication skills and learned how to work effectively with different teams to meet customer needs.
+
+My core technical skills include technical troubleshooting, HTML/CSS, Python, JavaScript, and SQL—tools I've frequently used in both IT and web development projects.
+</p>
+
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+						<p class="tab-links" onclick="opentab('experience')">Experience</p> 
+						<p class="tab-links" onclick="opentab('education')">Education</p>
+					</div>
+					<div class="tab-contents active-tab" id="skills">
+						<ul> 
+							<li><span>Web Development</span><br>HTML,CSS,&Javascript</li>
+							<li><span>Database Management</span><br>SQL & MySQL</li>
+							<li><span>Python</span><br>Loops,Functions,OOP, & Conditional Statements</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="experience">
+						<ul> 
+							<li><span>Walgreens</span><br>Customer Service,Photo Management</li>
+							<li><span>Unitedone Homehealth Care</span><br>Personal Care Assistant</li>
+							<li><span>Python</span><br>Loops,Functions,OOP, & Conditional Statements</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="education">
+						<ul> 
+							<li><span>2016-2020</span><br>Wayzata High School</li>
+							<li><span>2020-2022</span><br>North Hennepin Community College</li>
+							<li><span>2023-2025</span><br>Metro State University</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-----------projects----------->
+	<div id="projects">
+		<div class="container">
+			<h1 class="sub-title">My Projects</h1>
+			<div class="projects-list">
+				<div>
+					<i class="fa-solid fa-user"></i>
+					<h2>Landing Page</h2>
+					<p>This project involves designing and devloping a landing page aimed at strenghtining my web development skills. It involved using HTML and CSS to make a visually engaging page.</p>
+					<a href="#">learn more</a>
+				</div>
+				<div>
+					<i class="fa-solid fa-code-merge"></i>
+					<h2>Python Rock-Paper-Scissors Game</h2>
+					<p>A Python rock-paper scissors game that demonstartes user input and logic implementation.</p>
+					<a href="#">learn more</a>
+				</div>
+				<div>
+					<i class="fa-solid fa-globe"></i>
+					<h2>Personal Portfolio</h2>
+					<p>A responsive personal portfolio website designed to showcase my skills,projects,and background as a upcoming web developer.</p>
+					<a href="#">learn more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-------------contact----------- -->
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<div class ="contact-left">
+					<h1 class="sub-title">Contact Me</h1>
+					<p><i class="fa-solid fa-paper-plane"></i> abdullesaid11@gmail.com</p>
+					<p><i class="fa-solid fa-phone"></i> 952-657-0963</p>
+					<div class="social-icons">
+						<a href="https://www.linkedin.com/in/said-abdulle/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://github.com/saidabdulle7?tab=repositories"><i class="fa-brands fa-github"></i></a>
+					</div>
+					<a href="" download class="btn btn2">Download CV</a>
+
+				</div> 
+				<div class ="contact-right">
+					<form>
+						<input type="text" name="Name" placeholder="Your Name" required>
+						<input type="email" name="Email" placeholder="Your Email" required>
+						<textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+						<button type="submit" class="btn btn2">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright @. <i class="fa-solid fa-heart"></i> Made by Said Abdulle</p>
+		</div>
+	</div>
+
+
+	<script>
+
+		var tablinks = document.getElementsByClassName("tab-links");
+		var tabcontents = document.getElementsByClassName("tab-contents");
+
+		function opentab(tabname){
+			for(tablink of tablinks){
+				tablink.classList.remove("active-link");
+			}
+
+			for(tabcontent of tabcontents){
+				tabcontent.classList.remove("active-tab");
+			}
+
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+		}
+		
+	</script>
+	
+</body>
+</html> 
